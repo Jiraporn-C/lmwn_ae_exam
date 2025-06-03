@@ -1,0 +1,26 @@
+[0m18:34:11.668617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F7C9F0E270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F7CAE9F890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F7CABFD310>]}
+
+
+============================== 18:34:11.673118 | 9d1fc295-d469-4f6b-8d5a-57c30bcdccaa ==============================
+[0m18:34:11.673118 [info ] [MainThread]: Running with dbt=1.9.0
+[0m18:34:11.673649 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Jiraporn(Aom)Chattur\\.dbt', 'log_path': 'c:\\Users\\Jiraporn(Aom)Chattur\\Desktop\\Jira\\ae-exam-main\\ae_exam_project\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:34:11.764974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9d1fc295-d469-4f6b-8d5a-57c30bcdccaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F7CA5CCFC0>]}
+[0m18:34:11.790008 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m18:34:11.791361 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m18:34:11.792423 [debug] [MainThread]: Command `cli deps` succeeded at 18:34:11.792237 after 0.26 seconds
+[0m18:34:11.792972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F7CAF56F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F7CAF56250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002F7CB105750>]}
+[0m18:34:11.793300 [debug] [MainThread]: Flushing usage events
+[0m18:34:12.925103 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:40:33.899292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8A13AE270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8A232F890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8A2089310>]}
+
+
+============================== 18:40:33.903893 | c5bad66e-40e9-4d66-8355-c016394cf6a9 ==============================
+[0m18:40:33.903893 [info ] [MainThread]: Running with dbt=1.9.0
+[0m18:40:33.904852 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Jiraporn(Aom)Chattur\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'c:\\Users\\Jiraporn(Aom)Chattur\\Desktop\\Jira\\ae-exam-main\\ae_exam_project\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:40:34.026476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c5bad66e-40e9-4d66-8355-c016394cf6a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8A1A58FC0>]}
+[0m18:40:34.053074 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m18:40:34.055857 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m18:40:34.057058 [debug] [MainThread]: Command `cli deps` succeeded at 18:40:34.056840 after 0.33 seconds
+[0m18:40:34.057473 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8A23EAF10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8A23EA250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E8A2595750>]}
+[0m18:40:34.057791 [debug] [MainThread]: Flushing usage events
+[0m18:40:35.282270 [debug] [MainThread]: An error was encountered while trying to flush usage events
