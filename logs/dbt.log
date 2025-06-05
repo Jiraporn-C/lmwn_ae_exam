@@ -13153,3 +13153,808 @@ drop table if exists "ae_exam_db"."report"."report_campaign_effectiveness__dbt_b
 [0m15:02:22.472025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029504EEF7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029504488350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029506B23AD0>]}
 [0m15:02:22.472431 [debug] [MainThread]: Flushing usage events
 [0m15:02:25.550095 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:13:26.336136 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C703AAA3C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C704A27890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C704C17ED0>]}
+
+
+============================== 19:13:26.343667 | 502e799f-e176-4d6b-bb7a-232ce96ba40a ==============================
+[0m19:13:26.343667 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:13:26.344989 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Jiraporn(Aom)Chattur\\.dbt', 'log_path': 'C:\\Users\\Jiraporn(Aom)Chattur\\Desktop\\Jira\\ae-exam-main\\ae_exam_project\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:13:26.587241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7041510F0>]}
+[0m19:13:26.652977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C704AD3AC0>]}
+[0m19:13:26.656805 [info ] [MainThread]: Registered adapter: duckdb=1.9.3
+[0m19:13:27.004688 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m19:13:27.132274 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:13:27.132670 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:13:27.172607 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C704CE8850>]}
+[0m19:13:27.257044 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Jiraporn(Aom)Chattur\Desktop\Jira\ae-exam-main\ae_exam_project\target\manifest.json
+[0m19:13:27.272476 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Jiraporn(Aom)Chattur\Desktop\Jira\ae-exam-main\ae_exam_project\target\semantic_manifest.json
+[0m19:13:27.298206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C704A4F4D0>]}
+[0m19:13:27.299038 [info ] [MainThread]: Found 8 models, 4 sources, 429 macros
+[0m19:13:27.300384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7061F8AD0>]}
+[0m19:13:27.304312 [info ] [MainThread]: 
+[0m19:13:27.305076 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:13:27.305691 [info ] [MainThread]: 
+[0m19:13:27.306527 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:13:27.313326 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ae_exam_db'
+[0m19:13:27.411387 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db"
+[0m19:13:27.411902 [debug] [ThreadPool]: On list_ae_exam_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"ae_exam_db"'
+    
+  
+  
+[0m19:13:27.412251 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:13:27.441029 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m19:13:27.442974 [debug] [ThreadPool]: On list_ae_exam_db: Close
+[0m19:13:27.445188 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db"
+[0m19:13:27.445576 [debug] [ThreadPool]: On list_ae_exam_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"ae_exam_db"'
+    
+  
+  
+[0m19:13:27.446242 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.447370 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.448698 [debug] [ThreadPool]: On list_ae_exam_db: Close
+[0m19:13:27.450417 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db"
+[0m19:13:27.450740 [debug] [ThreadPool]: On list_ae_exam_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"ae_exam_db"'
+    
+  
+  
+[0m19:13:27.451059 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.452063 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.453320 [debug] [ThreadPool]: On list_ae_exam_db: Close
+[0m19:13:27.455466 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db"
+[0m19:13:27.455939 [debug] [ThreadPool]: On list_ae_exam_db: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"ae_exam_db"'
+    
+  
+  
+[0m19:13:27.456439 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.457911 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.459414 [debug] [ThreadPool]: On list_ae_exam_db: Close
+[0m19:13:27.460580 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ae_exam_db, now create_ae_exam_db_mart)
+[0m19:13:27.461652 [debug] [ThreadPool]: Creating schema "database: "ae_exam_db"
+schema: "mart"
+"
+[0m19:13:27.467881 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_mart"
+[0m19:13:27.468228 [debug] [ThreadPool]: On create_ae_exam_db_mart: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_mart"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='ae_exam_db'
+        and type='sqlite'
+    
+  
+[0m19:13:27.468579 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.469548 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.470863 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_mart"
+[0m19:13:27.471147 [debug] [ThreadPool]: On create_ae_exam_db_mart: BEGIN
+[0m19:13:27.471637 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.471999 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_mart"
+[0m19:13:27.472345 [debug] [ThreadPool]: On create_ae_exam_db_mart: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_mart"} */
+
+    
+    
+        create schema if not exists "ae_exam_db"."mart"
+    
+[0m19:13:27.474908 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m19:13:27.476120 [debug] [ThreadPool]: On create_ae_exam_db_mart: COMMIT
+[0m19:13:27.476652 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_mart"
+[0m19:13:27.477061 [debug] [ThreadPool]: On create_ae_exam_db_mart: COMMIT
+[0m19:13:27.477735 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.478186 [debug] [ThreadPool]: On create_ae_exam_db_mart: Close
+[0m19:13:27.478893 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_ae_exam_db_mart, now create_ae_exam_db_staging)
+[0m19:13:27.479455 [debug] [ThreadPool]: Creating schema "database: "ae_exam_db"
+schema: "staging"
+"
+[0m19:13:27.481462 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_staging"
+[0m19:13:27.481881 [debug] [ThreadPool]: On create_ae_exam_db_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='ae_exam_db'
+        and type='sqlite'
+    
+  
+[0m19:13:27.482249 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.483382 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.485065 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_staging"
+[0m19:13:27.485471 [debug] [ThreadPool]: On create_ae_exam_db_staging: BEGIN
+[0m19:13:27.486751 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.487202 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_staging"
+[0m19:13:27.487572 [debug] [ThreadPool]: On create_ae_exam_db_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_staging"} */
+
+    
+    
+        create schema if not exists "ae_exam_db"."staging"
+    
+[0m19:13:27.488278 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.489793 [debug] [ThreadPool]: On create_ae_exam_db_staging: COMMIT
+[0m19:13:27.490255 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_staging"
+[0m19:13:27.490601 [debug] [ThreadPool]: On create_ae_exam_db_staging: COMMIT
+[0m19:13:27.491257 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.492026 [debug] [ThreadPool]: On create_ae_exam_db_staging: Close
+[0m19:13:27.493315 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_ae_exam_db_staging, now create_ae_exam_db_report)
+[0m19:13:27.493966 [debug] [ThreadPool]: Creating schema "database: "ae_exam_db"
+schema: "report"
+"
+[0m19:13:27.496659 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_report"
+[0m19:13:27.497176 [debug] [ThreadPool]: On create_ae_exam_db_report: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_report"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='ae_exam_db'
+        and type='sqlite'
+    
+  
+[0m19:13:27.497585 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.498827 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.500947 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_report"
+[0m19:13:27.501407 [debug] [ThreadPool]: On create_ae_exam_db_report: BEGIN
+[0m19:13:27.502061 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.502448 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_report"
+[0m19:13:27.502786 [debug] [ThreadPool]: On create_ae_exam_db_report: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_report"} */
+
+    
+    
+        create schema if not exists "ae_exam_db"."report"
+    
+[0m19:13:27.503493 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.505840 [debug] [ThreadPool]: On create_ae_exam_db_report: COMMIT
+[0m19:13:27.506678 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_report"
+[0m19:13:27.507313 [debug] [ThreadPool]: On create_ae_exam_db_report: COMMIT
+[0m19:13:27.508401 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.509322 [debug] [ThreadPool]: On create_ae_exam_db_report: Close
+[0m19:13:27.510537 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_ae_exam_db_report, now create_ae_exam_db_intermediate)
+[0m19:13:27.511128 [debug] [ThreadPool]: Creating schema "database: "ae_exam_db"
+schema: "intermediate"
+"
+[0m19:13:27.512898 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_intermediate"
+[0m19:13:27.513223 [debug] [ThreadPool]: On create_ae_exam_db_intermediate: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_intermediate"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='ae_exam_db'
+        and type='sqlite'
+    
+  
+[0m19:13:27.513515 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.514556 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.515935 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_intermediate"
+[0m19:13:27.516230 [debug] [ThreadPool]: On create_ae_exam_db_intermediate: BEGIN
+[0m19:13:27.516702 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.517183 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_intermediate"
+[0m19:13:27.517776 [debug] [ThreadPool]: On create_ae_exam_db_intermediate: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "create_ae_exam_db_intermediate"} */
+
+    
+    
+        create schema if not exists "ae_exam_db"."intermediate"
+    
+[0m19:13:27.519160 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.520108 [debug] [ThreadPool]: On create_ae_exam_db_intermediate: COMMIT
+[0m19:13:27.520413 [debug] [ThreadPool]: Using duckdb connection "create_ae_exam_db_intermediate"
+[0m19:13:27.520657 [debug] [ThreadPool]: On create_ae_exam_db_intermediate: COMMIT
+[0m19:13:27.521090 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:13:27.521465 [debug] [ThreadPool]: On create_ae_exam_db_intermediate: Close
+[0m19:13:27.524176 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ae_exam_db_mart'
+[0m19:13:27.530322 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_mart"
+[0m19:13:27.530701 [debug] [ThreadPool]: On list_ae_exam_db_mart: BEGIN
+[0m19:13:27.530975 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:13:27.532295 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.532705 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_mart"
+[0m19:13:27.533023 [debug] [ThreadPool]: On list_ae_exam_db_mart: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db_mart"} */
+select
+      'ae_exam_db' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'mart'
+    and lower(table_catalog) = 'ae_exam_db'
+  
+[0m19:13:27.559980 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m19:13:27.563817 [debug] [ThreadPool]: On list_ae_exam_db_mart: ROLLBACK
+[0m19:13:27.565947 [debug] [ThreadPool]: Failed to rollback 'list_ae_exam_db_mart'
+[0m19:13:27.566633 [debug] [ThreadPool]: On list_ae_exam_db_mart: Close
+[0m19:13:27.567701 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ae_exam_db_mart, now list_ae_exam_db_staging)
+[0m19:13:27.570582 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_staging"
+[0m19:13:27.571025 [debug] [ThreadPool]: On list_ae_exam_db_staging: BEGIN
+[0m19:13:27.571398 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.572701 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.573086 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_staging"
+[0m19:13:27.573377 [debug] [ThreadPool]: On list_ae_exam_db_staging: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db_staging"} */
+select
+      'ae_exam_db' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'staging'
+    and lower(table_catalog) = 'ae_exam_db'
+  
+[0m19:13:27.577442 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m19:13:27.579947 [debug] [ThreadPool]: On list_ae_exam_db_staging: ROLLBACK
+[0m19:13:27.580743 [debug] [ThreadPool]: Failed to rollback 'list_ae_exam_db_staging'
+[0m19:13:27.581074 [debug] [ThreadPool]: On list_ae_exam_db_staging: Close
+[0m19:13:27.581593 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ae_exam_db_staging, now list_ae_exam_db_report)
+[0m19:13:27.583232 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_report"
+[0m19:13:27.583540 [debug] [ThreadPool]: On list_ae_exam_db_report: BEGIN
+[0m19:13:27.583847 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.585438 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m19:13:27.585808 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_report"
+[0m19:13:27.586116 [debug] [ThreadPool]: On list_ae_exam_db_report: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db_report"} */
+select
+      'ae_exam_db' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'report'
+    and lower(table_catalog) = 'ae_exam_db'
+  
+[0m19:13:27.591158 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m19:13:27.593101 [debug] [ThreadPool]: On list_ae_exam_db_report: ROLLBACK
+[0m19:13:27.593908 [debug] [ThreadPool]: Failed to rollback 'list_ae_exam_db_report'
+[0m19:13:27.594260 [debug] [ThreadPool]: On list_ae_exam_db_report: Close
+[0m19:13:27.594841 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ae_exam_db_report, now list_ae_exam_db_intermediate)
+[0m19:13:27.597150 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_intermediate"
+[0m19:13:27.597512 [debug] [ThreadPool]: On list_ae_exam_db_intermediate: BEGIN
+[0m19:13:27.597823 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:13:27.599030 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:13:27.599458 [debug] [ThreadPool]: Using duckdb connection "list_ae_exam_db_intermediate"
+[0m19:13:27.599777 [debug] [ThreadPool]: On list_ae_exam_db_intermediate: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "connection_name": "list_ae_exam_db_intermediate"} */
+select
+      'ae_exam_db' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'intermediate'
+    and lower(table_catalog) = 'ae_exam_db'
+  
+[0m19:13:27.603725 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m19:13:27.605253 [debug] [ThreadPool]: On list_ae_exam_db_intermediate: ROLLBACK
+[0m19:13:27.605813 [debug] [ThreadPool]: Failed to rollback 'list_ae_exam_db_intermediate'
+[0m19:13:27.606098 [debug] [ThreadPool]: On list_ae_exam_db_intermediate: Close
+[0m19:13:27.607838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7065ECEF0>]}
+[0m19:13:27.608383 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:13:27.608733 [debug] [MainThread]: On master: BEGIN
+[0m19:13:27.609036 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:13:27.610147 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:13:27.610543 [debug] [MainThread]: On master: COMMIT
+[0m19:13:27.610885 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:13:27.611162 [debug] [MainThread]: On master: COMMIT
+[0m19:13:27.611639 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:13:27.612013 [debug] [MainThread]: On master: Close
+[0m19:13:27.617264 [debug] [Thread-1 (]: Began running node model.ae_exam_project.model_stg_campaign_interactions
+[0m19:13:27.617912 [info ] [Thread-1 (]: 1 of 8 START sql view model staging.model_stg_campaign_interactions ............ [RUN]
+[0m19:13:27.619240 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.ae_exam_project.model_stg_campaign_interactions'
+[0m19:13:27.619883 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.model_stg_campaign_interactions
+[0m19:13:27.627908 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.631087 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.model_stg_campaign_interactions
+[0m19:13:27.672306 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.675015 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.675623 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: BEGIN
+[0m19:13:27.676362 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:13:27.677353 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.677799 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.678226 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_interactions"} */
+
+  
+  create view "ae_exam_db"."staging"."model_stg_campaign_interactions__dbt_tmp" as (
+    with source_data as (
+    select *
+    from "ae_exam_db"."main"."campaign_interactions"
+)
+
+select *
+from source_data
+  );
+
+[0m19:13:27.680028 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.686661 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.687145 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_interactions"} */
+alter view "ae_exam_db"."staging"."model_stg_campaign_interactions" rename to "model_stg_campaign_interactions__dbt_backup"
+[0m19:13:27.688873 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.691971 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.692490 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_interactions"} */
+alter view "ae_exam_db"."staging"."model_stg_campaign_interactions__dbt_tmp" rename to "model_stg_campaign_interactions"
+[0m19:13:27.693752 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.706305 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: COMMIT
+[0m19:13:27.706797 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.707243 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: COMMIT
+[0m19:13:27.714740 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m19:13:27.720409 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_interactions"
+[0m19:13:27.720804 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_interactions"} */
+drop view if exists "ae_exam_db"."staging"."model_stg_campaign_interactions__dbt_backup" cascade
+[0m19:13:27.725415 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m19:13:27.728282 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_interactions: Close
+[0m19:13:27.731094 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C706644050>]}
+[0m19:13:27.731921 [info ] [Thread-1 (]: 1 of 8 OK created sql view model staging.model_stg_campaign_interactions ....... [[32mOK[0m in 0.11s]
+[0m19:13:27.733153 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.model_stg_campaign_interactions
+[0m19:13:27.733732 [debug] [Thread-1 (]: Began running node model.ae_exam_project.model_stg_campaign_master
+[0m19:13:27.734706 [info ] [Thread-1 (]: 2 of 8 START sql view model staging.model_stg_campaign_master .................. [RUN]
+[0m19:13:27.735642 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_exam_project.model_stg_campaign_interactions, now model.ae_exam_project.model_stg_campaign_master)
+[0m19:13:27.736066 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.model_stg_campaign_master
+[0m19:13:27.738707 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.740091 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.model_stg_campaign_master
+[0m19:13:27.744173 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.746042 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.746804 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: BEGIN
+[0m19:13:27.747406 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:13:27.748796 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.749634 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.750321 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_master"} */
+
+  
+  create view "ae_exam_db"."staging"."model_stg_campaign_master__dbt_tmp" as (
+    with source_data as (
+    select *
+    from "ae_exam_db"."main"."campaign_master"
+)
+
+select *
+from source_data
+  );
+
+[0m19:13:27.752149 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.759402 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.761150 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_master"} */
+alter view "ae_exam_db"."staging"."model_stg_campaign_master" rename to "model_stg_campaign_master__dbt_backup"
+[0m19:13:27.763648 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.770009 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.771094 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_master"} */
+alter view "ae_exam_db"."staging"."model_stg_campaign_master__dbt_tmp" rename to "model_stg_campaign_master"
+[0m19:13:27.772563 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.775047 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: COMMIT
+[0m19:13:27.775619 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.776263 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: COMMIT
+[0m19:13:27.780294 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:27.783827 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_campaign_master"
+[0m19:13:27.784259 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_campaign_master"} */
+drop view if exists "ae_exam_db"."staging"."model_stg_campaign_master__dbt_backup" cascade
+[0m19:13:27.787435 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:27.790483 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_campaign_master: Close
+[0m19:13:27.791604 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C706660050>]}
+[0m19:13:27.792893 [info ] [Thread-1 (]: 2 of 8 OK created sql view model staging.model_stg_campaign_master ............. [[32mOK[0m in 0.06s]
+[0m19:13:27.794384 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.model_stg_campaign_master
+[0m19:13:27.795017 [debug] [Thread-1 (]: Began running node model.ae_exam_project.model_stg_customers_master
+[0m19:13:27.796059 [info ] [Thread-1 (]: 3 of 8 START sql view model staging.model_stg_customers_master ................. [RUN]
+[0m19:13:27.796987 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_exam_project.model_stg_campaign_master, now model.ae_exam_project.model_stg_customers_master)
+[0m19:13:27.797518 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.model_stg_customers_master
+[0m19:13:27.801013 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.802992 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.model_stg_customers_master
+[0m19:13:27.809529 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.812453 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.814238 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: BEGIN
+[0m19:13:27.815779 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:13:27.817223 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:13:27.817785 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.818223 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_customers_master"} */
+
+  
+  create view "ae_exam_db"."staging"."model_stg_customers_master__dbt_tmp" as (
+    with source_data as (
+    select *
+    from "ae_exam_db"."main"."customers_master"
+)
+
+select *
+from source_data
+  );
+
+[0m19:13:27.819612 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.824285 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.824795 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_customers_master"} */
+alter view "ae_exam_db"."staging"."model_stg_customers_master" rename to "model_stg_customers_master__dbt_backup"
+[0m19:13:27.825931 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.833996 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.834973 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_customers_master"} */
+alter view "ae_exam_db"."staging"."model_stg_customers_master__dbt_tmp" rename to "model_stg_customers_master"
+[0m19:13:27.836324 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.838362 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: COMMIT
+[0m19:13:27.839007 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.839559 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: COMMIT
+[0m19:13:27.843436 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:27.848288 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_customers_master"
+[0m19:13:27.848808 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_customers_master"} */
+drop view if exists "ae_exam_db"."staging"."model_stg_customers_master__dbt_backup" cascade
+[0m19:13:27.852283 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:27.853864 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_customers_master: Close
+[0m19:13:27.854695 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C70662D590>]}
+[0m19:13:27.855547 [info ] [Thread-1 (]: 3 of 8 OK created sql view model staging.model_stg_customers_master ............ [[32mOK[0m in 0.06s]
+[0m19:13:27.857071 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.model_stg_customers_master
+[0m19:13:27.857824 [debug] [Thread-1 (]: Began running node model.ae_exam_project.model_stg_order_transactions
+[0m19:13:27.858392 [info ] [Thread-1 (]: 4 of 8 START sql view model staging.model_stg_order_transactions ............... [RUN]
+[0m19:13:27.859571 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_exam_project.model_stg_customers_master, now model.ae_exam_project.model_stg_order_transactions)
+[0m19:13:27.860478 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.model_stg_order_transactions
+[0m19:13:27.864654 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.866001 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.model_stg_order_transactions
+[0m19:13:27.869339 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.871315 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.872367 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: BEGIN
+[0m19:13:27.872859 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:13:27.873670 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.874092 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.874465 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_order_transactions"} */
+
+  
+  create view "ae_exam_db"."staging"."model_stg_order_transactions__dbt_tmp" as (
+    with source_data as (
+    select *
+    from "ae_exam_db"."main"."order_transactions"
+)
+
+select *
+from source_data
+  );
+
+[0m19:13:27.875608 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.881030 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.882040 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_order_transactions"} */
+alter view "ae_exam_db"."staging"."model_stg_order_transactions" rename to "model_stg_order_transactions__dbt_backup"
+[0m19:13:27.883449 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.887018 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.887390 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_order_transactions"} */
+alter view "ae_exam_db"."staging"."model_stg_order_transactions__dbt_tmp" rename to "model_stg_order_transactions"
+[0m19:13:27.888084 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:13:27.890847 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: COMMIT
+[0m19:13:27.891327 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.891700 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: COMMIT
+[0m19:13:27.895609 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:27.900288 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_stg_order_transactions"
+[0m19:13:27.901242 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_stg_order_transactions"} */
+drop view if exists "ae_exam_db"."staging"."model_stg_order_transactions__dbt_backup" cascade
+[0m19:13:27.904961 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:27.910005 [debug] [Thread-1 (]: On model.ae_exam_project.model_stg_order_transactions: Close
+[0m19:13:27.911497 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C70647E850>]}
+[0m19:13:27.913075 [info ] [Thread-1 (]: 4 of 8 OK created sql view model staging.model_stg_order_transactions .......... [[32mOK[0m in 0.05s]
+[0m19:13:27.914887 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.model_stg_order_transactions
+[0m19:13:27.916373 [debug] [Thread-1 (]: Began running node model.ae_exam_project.model_int_campaign_conversions
+[0m19:13:27.916972 [info ] [Thread-1 (]: 5 of 8 START sql view model intermediate.model_int_campaign_conversions ........ [RUN]
+[0m19:13:27.917883 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_exam_project.model_stg_order_transactions, now model.ae_exam_project.model_int_campaign_conversions)
+[0m19:13:27.918440 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.model_int_campaign_conversions
+[0m19:13:27.922790 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:27.924204 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.model_int_campaign_conversions
+[0m19:13:27.929768 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:27.932635 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:27.933678 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: BEGIN
+[0m19:13:27.934231 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:13:27.935209 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:27.935718 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:27.936100 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_int_campaign_conversions"} */
+
+  
+  create view "ae_exam_db"."intermediate"."model_int_campaign_conversions__dbt_tmp" as (
+    with interactions as (
+  select
+    interaction_datetime,
+    campaign_id,
+    customer_id,
+    order_id,
+    revenue
+  from "ae_exam_db"."staging"."model_stg_campaign_interactions"
+  where event_type = 'conversion'
+),
+orders as (
+  select * from "ae_exam_db"."staging"."model_stg_order_transactions"
+),
+joined as (
+  select
+    i.interaction_datetime,
+    i.campaign_id,
+    i.customer_id,
+    i.order_id,
+    i.revenue,
+    o.total_amount
+  from interactions i
+  left join orders o on i.order_id = o.order_id
+  where o.order_status = 'completed'
+          
+)
+
+select * from joined
+  );
+
+[0m19:13:27.937874 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:28.004645 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:28.005258 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_int_campaign_conversions"} */
+alter view "ae_exam_db"."intermediate"."model_int_campaign_conversions" rename to "model_int_campaign_conversions__dbt_backup"
+[0m19:13:28.006223 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:13:28.009482 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:28.010043 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_int_campaign_conversions"} */
+alter view "ae_exam_db"."intermediate"."model_int_campaign_conversions__dbt_tmp" rename to "model_int_campaign_conversions"
+[0m19:13:28.010958 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:13:28.012938 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: COMMIT
+[0m19:13:28.013438 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:28.013823 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: COMMIT
+[0m19:13:28.017361 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:28.019615 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_campaign_conversions"
+[0m19:13:28.019955 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_int_campaign_conversions"} */
+drop view if exists "ae_exam_db"."intermediate"."model_int_campaign_conversions__dbt_backup" cascade
+[0m19:13:28.023774 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:28.025396 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_campaign_conversions: Close
+[0m19:13:28.025974 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C706640FA0>]}
+[0m19:13:28.026769 [info ] [Thread-1 (]: 5 of 8 OK created sql view model intermediate.model_int_campaign_conversions ... [[32mOK[0m in 0.11s]
+[0m19:13:28.028673 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.model_int_campaign_conversions
+[0m19:13:28.030038 [debug] [Thread-1 (]: Began running node model.ae_exam_project.model_int_new_customer_converted
+[0m19:13:28.030658 [info ] [Thread-1 (]: 6 of 8 START sql view model intermediate.model_int_new_customer_converted ...... [RUN]
+[0m19:13:28.031668 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_exam_project.model_int_campaign_conversions, now model.ae_exam_project.model_int_new_customer_converted)
+[0m19:13:28.032245 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.model_int_new_customer_converted
+[0m19:13:28.035024 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.model_int_new_customer_converted"
+[0m19:13:28.036337 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.model_int_new_customer_converted
+[0m19:13:28.039533 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.model_int_new_customer_converted"
+[0m19:13:28.041036 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_new_customer_converted"
+[0m19:13:28.041956 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_new_customer_converted: BEGIN
+[0m19:13:28.042683 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:13:28.043693 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:28.044235 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_new_customer_converted"
+[0m19:13:28.044812 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_new_customer_converted: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_int_new_customer_converted"} */
+
+  
+  create view "ae_exam_db"."intermediate"."model_int_new_customer_converted__dbt_tmp" as (
+    with new_customers_converted as (
+  select
+    icc.campaign_id,
+    date(icc.interaction_datetime) as date,
+    count(icc.customer_id) as new_customers,
+  from "ae_exam_db"."intermediate"."model_int_campaign_conversions" icc
+  inner join "ae_exam_db"."staging"."model_stg_customers_master" scm  
+  on icc.customer_id = scm.customer_id
+  where scm.customer_segment = 'new'
+  group by icc.campaign_id, date(icc.interaction_datetime)
+)
+
+select * from new_customers_converted
+  );
+
+[0m19:13:28.047579 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:13:28.053166 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_new_customer_converted"
+[0m19:13:28.053898 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_new_customer_converted: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_int_new_customer_converted"} */
+alter view "ae_exam_db"."intermediate"."model_int_new_customer_converted__dbt_tmp" rename to "model_int_new_customer_converted"
+[0m19:13:28.054945 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:28.056449 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_new_customer_converted: COMMIT
+[0m19:13:28.056828 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_new_customer_converted"
+[0m19:13:28.057146 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_new_customer_converted: COMMIT
+[0m19:13:28.061004 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:28.065778 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_int_new_customer_converted"
+[0m19:13:28.066247 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_new_customer_converted: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_int_new_customer_converted"} */
+drop view if exists "ae_exam_db"."intermediate"."model_int_new_customer_converted__dbt_backup" cascade
+[0m19:13:28.067069 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:13:28.069077 [debug] [Thread-1 (]: On model.ae_exam_project.model_int_new_customer_converted: Close
+[0m19:13:28.069680 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C70620F0B0>]}
+[0m19:13:28.070260 [info ] [Thread-1 (]: 6 of 8 OK created sql view model intermediate.model_int_new_customer_converted . [[32mOK[0m in 0.04s]
+[0m19:13:28.071942 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.model_int_new_customer_converted
+[0m19:13:28.072491 [debug] [Thread-1 (]: Began running node model.ae_exam_project.model_mart_campaign_performance
+[0m19:13:28.073068 [info ] [Thread-1 (]: 7 of 8 START sql table model mart.model_mart_campaign_performance .............. [RUN]
+[0m19:13:28.073982 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_exam_project.model_int_new_customer_converted, now model.ae_exam_project.model_mart_campaign_performance)
+[0m19:13:28.074498 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.model_mart_campaign_performance
+[0m19:13:28.081905 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.083649 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.model_mart_campaign_performance
+[0m19:13:28.109282 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.112163 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.113399 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: BEGIN
+[0m19:13:28.114512 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:13:28.116076 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:28.116724 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.117242 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_mart_campaign_performance"} */
+
+  
+    
+    
+
+    create  table
+      "ae_exam_db"."mart"."model_mart_campaign_performance__dbt_tmp"
+  
+    as (
+      
+
+with impression as (
+  select
+    campaign_id,
+    date(interaction_datetime) as date,
+    count(*) as impressions
+  from "ae_exam_db"."staging"."model_stg_campaign_interactions"
+  where event_type = 'impression'
+  group by campaign_id, date(interaction_datetime)
+),
+click as (
+  select
+    campaign_id,
+    date(interaction_datetime) as date,
+    count(*) as clicks
+  from "ae_exam_db"."staging"."model_stg_campaign_interactions"
+  where event_type = 'click'
+  group by campaign_id, date(interaction_datetime)
+),
+conversions as (
+  select
+    campaign_id,
+    date(interaction_datetime) as date,
+    count(order_id) as conversions,
+    sum(total_amount) as total_revenue
+  from "ae_exam_db"."intermediate"."model_int_campaign_conversions"
+  group by campaign_id, date(interaction_datetime)
+),
+costs as (
+  select 
+    campaign_id, 
+    date(interaction_datetime) as date,
+    sum(ad_cost) as total_cost
+  from "ae_exam_db"."staging"."model_stg_campaign_interactions"
+  group by campaign_id, date(interaction_datetime)
+),
+campaign_name as (
+  select 
+    campaign_id, 
+    campaign_name
+  from "ae_exam_db"."staging"."model_stg_campaign_master"
+),
+new_customers_converted as (
+  select
+    icc.campaign_id,
+    date(icc.interaction_datetime) as date,
+    count(icc.customer_id) as new_customers,
+  from "ae_exam_db"."intermediate"."model_int_campaign_conversions" icc
+  inner join "ae_exam_db"."staging"."model_stg_customers_master" scm  
+  on icc.customer_id = scm.customer_id
+  where scm.customer_segment = 'new'
+  group by icc.campaign_id, date(icc.interaction_datetime)
+),
+final as (
+  select
+    cn.campaign_name,
+    i.date,
+    i.impressions,
+    cl.clicks,
+    cv.conversions,
+    cv.total_revenue,
+    co.total_cost,
+    co.total_cost / ncc.new_customers as cac,
+    ROUND((cv.total_revenue/co.total_cost)*100,2) as roas_percentage
+  from impression i
+  left join click cl on i.campaign_id = cl.campaign_id and i.date = cl.date
+  left join conversions cv on i.campaign_id = cv.campaign_id and i.date = cv.date
+  left join costs co on i.campaign_id = co.campaign_id and i.date = co.date
+  left join campaign_name cn on i.campaign_id = cn.campaign_id
+  left join new_customers_converted ncc on i.campaign_id = ncc.campaign_id and i.date = ncc.date
+)
+select * from final
+    );
+  
+  
+[0m19:13:28.171008 [debug] [Thread-1 (]: SQL status: OK in 0.053 seconds
+[0m19:13:28.173718 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.174100 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_mart_campaign_performance"} */
+alter table "ae_exam_db"."mart"."model_mart_campaign_performance" rename to "model_mart_campaign_performance__dbt_backup"
+[0m19:13:28.175322 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:28.178858 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.179251 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_mart_campaign_performance"} */
+alter table "ae_exam_db"."mart"."model_mart_campaign_performance__dbt_tmp" rename to "model_mart_campaign_performance"
+[0m19:13:28.179960 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:13:28.185062 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: COMMIT
+[0m19:13:28.185426 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.185733 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: COMMIT
+[0m19:13:28.192771 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m19:13:28.195373 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.model_mart_campaign_performance"
+[0m19:13:28.195778 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.model_mart_campaign_performance"} */
+drop table if exists "ae_exam_db"."mart"."model_mart_campaign_performance__dbt_backup" cascade
+[0m19:13:28.199146 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:28.200792 [debug] [Thread-1 (]: On model.ae_exam_project.model_mart_campaign_performance: Close
+[0m19:13:28.201290 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C705E53C50>]}
+[0m19:13:28.201847 [info ] [Thread-1 (]: 7 of 8 OK created sql table model mart.model_mart_campaign_performance ......... [[32mOK[0m in 0.13s]
+[0m19:13:28.203065 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.model_mart_campaign_performance
+[0m19:13:28.204377 [debug] [Thread-1 (]: Began running node model.ae_exam_project.report_campaign_effectiveness
+[0m19:13:28.204944 [info ] [Thread-1 (]: 8 of 8 START sql table model report.report_campaign_effectiveness .............. [RUN]
+[0m19:13:28.206004 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ae_exam_project.model_mart_campaign_performance, now model.ae_exam_project.report_campaign_effectiveness)
+[0m19:13:28.206592 [debug] [Thread-1 (]: Began compiling node model.ae_exam_project.report_campaign_effectiveness
+[0m19:13:28.210764 [debug] [Thread-1 (]: Writing injected SQL for node "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.212625 [debug] [Thread-1 (]: Began executing node model.ae_exam_project.report_campaign_effectiveness
+[0m19:13:28.218436 [debug] [Thread-1 (]: Writing runtime sql for node "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.219708 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.220313 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: BEGIN
+[0m19:13:28.220750 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:13:28.221525 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:28.221923 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.222276 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.report_campaign_effectiveness"} */
+
+  
+    
+    
+
+    create  table
+      "ae_exam_db"."report"."report_campaign_effectiveness__dbt_tmp"
+  
+    as (
+      
+
+select *
+from "ae_exam_db"."mart"."model_mart_campaign_performance"
+order by date asc
+    );
+  
+  
+[0m19:13:28.232351 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m19:13:28.235167 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.235547 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.report_campaign_effectiveness"} */
+alter table "ae_exam_db"."report"."report_campaign_effectiveness" rename to "report_campaign_effectiveness__dbt_backup"
+[0m19:13:28.236258 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:13:28.239966 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.240609 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.report_campaign_effectiveness"} */
+alter table "ae_exam_db"."report"."report_campaign_effectiveness__dbt_tmp" rename to "report_campaign_effectiveness"
+[0m19:13:28.241864 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:13:28.244152 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: COMMIT
+[0m19:13:28.245021 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.245654 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: COMMIT
+[0m19:13:28.251757 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m19:13:28.253788 [debug] [Thread-1 (]: Using duckdb connection "model.ae_exam_project.report_campaign_effectiveness"
+[0m19:13:28.254126 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "ae_exam_project", "target_name": "dev", "node_id": "model.ae_exam_project.report_campaign_effectiveness"} */
+drop table if exists "ae_exam_db"."report"."report_campaign_effectiveness__dbt_backup" cascade
+[0m19:13:28.257348 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:13:28.258923 [debug] [Thread-1 (]: On model.ae_exam_project.report_campaign_effectiveness: Close
+[0m19:13:28.259593 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '502e799f-e176-4d6b-bb7a-232ce96ba40a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7065F2570>]}
+[0m19:13:28.260501 [info ] [Thread-1 (]: 8 of 8 OK created sql table model report.report_campaign_effectiveness ......... [[32mOK[0m in 0.05s]
+[0m19:13:28.262240 [debug] [Thread-1 (]: Finished running node model.ae_exam_project.report_campaign_effectiveness
+[0m19:13:28.265189 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:13:28.265600 [debug] [MainThread]: On master: BEGIN
+[0m19:13:28.265879 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:13:28.266486 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:13:28.266762 [debug] [MainThread]: On master: COMMIT
+[0m19:13:28.267016 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:13:28.267333 [debug] [MainThread]: On master: COMMIT
+[0m19:13:28.267874 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:13:28.268223 [debug] [MainThread]: On master: Close
+[0m19:13:28.268689 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:13:28.268968 [debug] [MainThread]: Connection 'create_ae_exam_db_intermediate' was properly closed.
+[0m19:13:28.269213 [debug] [MainThread]: Connection 'list_ae_exam_db_intermediate' was properly closed.
+[0m19:13:28.269426 [debug] [MainThread]: Connection 'model.ae_exam_project.report_campaign_effectiveness' was properly closed.
+[0m19:13:28.269758 [info ] [MainThread]: 
+[0m19:13:28.270610 [info ] [MainThread]: Finished running 2 table models, 6 view models in 0 hours 0 minutes and 0.96 seconds (0.96s).
+[0m19:13:28.273652 [debug] [MainThread]: Command end result
+[0m19:13:28.301248 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\Jiraporn(Aom)Chattur\Desktop\Jira\ae-exam-main\ae_exam_project\target\manifest.json
+[0m19:13:28.303955 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\Jiraporn(Aom)Chattur\Desktop\Jira\ae-exam-main\ae_exam_project\target\semantic_manifest.json
+[0m19:13:28.313296 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\Jiraporn(Aom)Chattur\Desktop\Jira\ae-exam-main\ae_exam_project\target\run_results.json
+[0m19:13:28.314242 [info ] [MainThread]: 
+[0m19:13:28.315803 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:13:28.317313 [info ] [MainThread]: 
+[0m19:13:28.318383 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m19:13:28.319743 [debug] [MainThread]: Command `dbt run` succeeded at 19:13:28.319566 after 2.33 seconds
+[0m19:13:28.320211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C704049BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C701D538F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C704C9BB90>]}
+[0m19:13:28.320632 [debug] [MainThread]: Flushing usage events
+[0m19:13:31.297731 [debug] [MainThread]: An error was encountered while trying to flush usage events
