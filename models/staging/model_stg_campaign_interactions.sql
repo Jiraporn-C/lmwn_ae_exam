@@ -1,8 +1,8 @@
-with raw_camp_data as (
+with source_data as (
     select *
     from {{ source('main', 'campaign_interactions') }}
 )
 
 select *
-from raw_camp_data
-where platform = 'google'
+from source_data
+

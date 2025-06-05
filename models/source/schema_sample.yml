@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: main
+    tables:
+      - name: campaign_interactions
+      - name: campaign_master
+      - name: order_transactions
+      - name: customers_master
+
+
+
