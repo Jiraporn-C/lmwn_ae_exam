@@ -42,8 +42,12 @@ campaign_name as (
   from {{ ref('model_stg_campaign_master') }}
 ),
 new_customers_converted as (
-  select *
+  select 
+    campaign_id,
+    date,
+    count(distinct customer_id) as new_customers
   from {{ ref('model_int_new_customer_converted') }}
+  group by campaign_id,date
 ),
 final as (
   select
