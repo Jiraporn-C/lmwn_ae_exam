@@ -35,3 +35,6 @@ jobs:
 
       - name: Run dbt test
         run: dbt test
+        
+      - name: Run dbt deps
+        run: dbt deps
