@@ -1,5 +1,5 @@
 with new_customers_converted as (
-  select
+  select distinct 
     icc.campaign_id,
     date(icc.interaction_datetime) as date,
     icc.customer_id

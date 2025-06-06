@@ -2,4 +2,4 @@
 
 select *
 from {{ ref('model_mart_campaign_performance') }}
-order by date asc
+order by interaction_date asc
