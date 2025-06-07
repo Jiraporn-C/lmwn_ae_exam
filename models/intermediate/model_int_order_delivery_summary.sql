@@ -7,19 +7,15 @@ with summary as (
         ot.pickup_datetime,
         ot.delivery_datetime,
         ot.is_late_delivery,
-
         case when ot.order_status = 'completed' then 1 else 0 end as is_completed,
         case when ot.order_status != 'completed' then 1 else 0 end as is_failed,
-
         extract(epoch from ot.pickup_datetime - ot.order_datetime) / 60.0 as response_time_mins,
         extract(epoch from ot.delivery_datetime - ot.pickup_datetime) / 60.0 as delivery_time_mins,
         extract(epoch from ot.delivery_datetime - ot.order_datetime) / 60.0 as delivery_duration_mins,
-
         case when ot.is_late_delivery = true then 1 else 0 end as late_deliveries,
-
         st.csat_score,
         st.ticket_id,
-
+        st.issue_sub_type,
         ld.bonus_amount,
         ld.delivery_target,
         ld.actual_deliveries,

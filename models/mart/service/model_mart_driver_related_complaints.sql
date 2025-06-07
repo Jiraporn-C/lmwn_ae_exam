@@ -19,7 +19,7 @@ select
   pf.driver_rating 
 from {{ ref('model_int_ticket_resolution_summary') }} rs
 left join order_data o on rs.driver_id = o.driver_id
-left join {{ ref('model_int_driver_profile_active') }} pf on rs.driver_id = pf.driver_id
+inner join {{ ref('model_int_driver_profile_active') }} pf on rs.driver_id = pf.driver_id
 where rs.issue_type = 'rider'
 group by rs.driver_id, rs.issue_sub_type, o.total_orders, pf.driver_rating
 

@@ -109,4 +109,12 @@ models:
         description: "FK to order"
         tests:
           - not_null
+  - name: model_stg_restaurants_master
+    description: "Staging model for restaurants_master"
+    columns:
+      - name: restaurant_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
 

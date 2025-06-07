@@ -31,6 +31,7 @@ returned_customers as (
 select
   rs.restaurant_id,
   rs.issue_sub_type,
+  rm.active_status as restaurant_status,
   count(rs.ticket_id) as total_complaints,
   round(avg(rs.resolution_duration_mins), 2) as avg_resolution_time,
   sum(rs.compensation_amount) as total_compensation,
@@ -40,8 +41,10 @@ select
 from {{ ref('model_int_ticket_resolution_summary') }} rs
 left join order_data o on rs.restaurant_id = o.restaurant_id
 left join returned_customers rc on rs.customer_id = rc.customer_id  
+left join {{ ref('model_stg_restaurants_master') }} rm on rs.restaurant_id =  rm.restaurant_id
 where rs.issue_type = 'food'
 group by
   rs.restaurant_id,
   rs.issue_sub_type,
-  o.total_orders
+  o.total_orders,
+  rm.active_status

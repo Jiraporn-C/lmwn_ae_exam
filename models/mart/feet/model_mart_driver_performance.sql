@@ -4,20 +4,18 @@ select
     ods.driver_id,
     dp.vehicle_type,
     dp.region,
-    sum(ods.delivery_target) as total_target,
-    sum(ods.actual_deliveries) as total_actual_deliveries,   
+    count(ods.order_id) as total_order,
+    sum(ods.is_completed) as completed_order,
     round(avg(ods.response_time_mins), 2) as avg_response_time_mins,
     round(avg(ods.delivery_time_mins), 2) as avg_delivery_time_mins,
     sum(ods.late_deliveries) as late_deliveries,
-    round(avg(ods.csat_score),2) as avg_feedback_score,
-    count(ods.ticket_id) as total_feedbacks
+    ods.issue_sub_type as feedback
+
 from {{ ref('model_int_order_delivery_summary') }} ods
-left join {{ ref('model_int_driver_profile_active') }} dp on ods.driver_id = dp.driver_id
-where ods.driver_id is not null
+inner join {{ ref('model_int_driver_profile_active') }} dp on ods.driver_id = dp.driver_id
 group by  
     ods.driver_id,
     dp.vehicle_type,
     dp.region,
-    ods.csat_score,
-    ods.ticket_id
+    ods.issue_sub_type
 
