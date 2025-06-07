@@ -6,7 +6,7 @@ select
     sum(delivery_target) as total_target,
     sum(actual_deliveries) as total_actual_deliveries,
     count(ot.order_id) as total_tasks,
-    count(case when (ot.order_status  = 'completed') then 1 end) as completed_tasks, ---ต้องใส้เพิ่มไหมนะ and issue_type = 'delivery' and issue_sub_type != 'not_delivered'
+    count(case when (ot.order_status  = 'completed') then 1 end) as completed_tasks, 
     avg(extract(epoch from ot.pickup_datetime - ot.order_datetime) / 60.0) as avg_response_time_mins,
     avg(extract(epoch from ot.delivery_datetime - ot.pickup_datetime) / 60.0) as avg_delivery_time_mins,
     count(case when ot.is_late_delivery = true then 1 end) as late_deliveries,
