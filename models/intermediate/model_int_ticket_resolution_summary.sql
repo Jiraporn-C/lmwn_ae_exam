@@ -1,7 +1,9 @@
 
 select
   ticket_id,
+  customer_id,
   driver_id,
+  restaurant_id,
   issue_type,
   issue_sub_type,
   opened_datetime,
