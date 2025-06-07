@@ -1,5 +1,6 @@
 select
     driver_id,
+    join_date,
     vehicle_type,
     region,
     active_status,
