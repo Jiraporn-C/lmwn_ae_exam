@@ -1,0 +1,103 @@
+version: 2
+
+models:
+  - name: model_mart_driver_incentive_impact
+    description: "Mart model for analyzing impact of driver incentives"
+    columns:
+      - name: driver_id
+        description: "FK to driver"
+        tests:
+          - not_null
+      - name: incentive_program
+        description: "Incentive type applied"
+        tests:
+          - not_null
+
+  - name: model_mart_driver_performance
+    description: "Mart model for driver-level performance metrics"
+    columns:
+      - name: driver_id
+        description: "FK to driver"
+        tests:
+          - not_null
+
+      # - name: total_orders
+      #   description: "Total orders completed"
+      #   tests:
+      #     - not_null
+
+  - name: model_mart_driver_zone_heatmap
+    description: "Mart model for delivery heatmap by zone"
+    columns:
+      - name: delivery_zone
+        description: "Zone identifier"
+        tests:
+          - not_null
+      - name: total_requests
+        description: "Requests in the zone"
+        tests:
+          - not_null
+
+  - name: model_mart_campaign_performance
+    description: "Mart model to evaluate campaign KPIs"
+    columns:
+      - name: campaign_id
+        description: "FK to campaign"
+        tests:
+          - not_null
+
+      - name: total_revenue
+        description: "Revenue from campaign"
+        tests:
+          - not_null
+
+  - name: model_mart_customer_acquisition
+    description: "Mart model to analyze new customer acquisition"
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+
+  - name: model_mart_retargeting_performance
+    description: "Mart model to track retargeting impact"
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+
+
+  - name: model_mart_complaint_summary
+    description: "Mart model for summarizing complaints"
+    columns:
+      - name: issue_type
+        description: "Complaint category"
+        tests:
+          - not_null
+      - name: total_complaints
+        description: "Complaint volume"
+        tests:
+          - not_null
+
+  - name: model_mart_driver_related_complaints
+    description: "Mart model for complaints about drivers"
+    columns:
+      - name: driver_id
+        description: "FK to driver"
+        tests:
+          - not_null
+      - name: issue_sub_type
+        description: "Detailed issue"
+        tests:
+          - not_null
+
+  - name: model_mart_restaurant_quality_complaint
+    description: "Mart model for complaints about restaurant quality"
+    columns:
+      - name: restaurant_id
+        description: "FK to restaurant"
+        tests:
+          - not_null
+      - name: issue_sub_type
+        description: "Detailed issue"
+        tests:
+          - not_null
