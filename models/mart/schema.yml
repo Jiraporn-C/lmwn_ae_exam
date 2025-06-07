@@ -2,102 +2,92 @@ version: 2
 
 models:
   - name: model_mart_driver_incentive_impact
-    description: "Mart model for analyzing impact of driver incentives"
+    description: "Impact of incentive programs on driver performance"
     columns:
       - name: driver_id
-        description: "FK to driver"
         tests:
           - not_null
       - name: incentive_program
-        description: "Incentive type applied"
         tests:
           - not_null
 
   - name: model_mart_driver_performance
-    description: "Mart model for driver-level performance metrics"
+    description: "Overall performance metrics for each driver"
     columns:
       - name: driver_id
-        description: "FK to driver"
         tests:
           - not_null
-
-      # - name: total_orders
-      #   description: "Total orders completed"
-      #   tests:
-      #     - not_null
+      - name: total_order
+        tests:
+          - not_null
 
   - name: model_mart_driver_zone_heatmap
-    description: "Mart model for delivery heatmap by zone"
+    description: "Heatmap of delivery activity and failed requests by zone"
     columns:
       - name: delivery_zone
-        description: "Zone identifier"
         tests:
           - not_null
-      - name: total_requests
-        description: "Requests in the zone"
-        tests:
-          - not_null
+
 
   - name: model_mart_campaign_performance
-    description: "Mart model to evaluate campaign KPIs"
+    description: "Campaign performance with attribution to orders and revenue"
     columns:
       - name: campaign_id
-        description: "FK to campaign"
         tests:
           - not_null
-
       - name: total_revenue
-        description: "Revenue from campaign"
         tests:
           - not_null
 
   - name: model_mart_customer_acquisition
-    description: "Mart model to analyze new customer acquisition"
+    description: "New customer acquisition from campaign efforts"
     columns:
       - name: campaign_id
+        tests:
+          - not_null
+      - name: acquisition_date
         tests:
           - not_null
 
   - name: model_mart_retargeting_performance
-    description: "Mart model to track retargeting impact"
+    description: "Performance of retargeting campaigns"
     columns:
       - name: campaign_id
         tests:
           - not_null
-
+      - name: total_ad_cost
+        tests:
+          - not_null
 
   - name: model_mart_complaint_summary
-    description: "Mart model for summarizing complaints"
+    description: "Summary of all complaints"
     columns:
       - name: issue_type
-        description: "Complaint category"
+        tests:
+          - not_null
+      - name: complaint_date
         tests:
           - not_null
       - name: total_complaints
-        description: "Complaint volume"
         tests:
           - not_null
 
   - name: model_mart_driver_related_complaints
-    description: "Mart model for complaints about drivers"
+    description: "Complaints associated with drivers"
     columns:
       - name: driver_id
-        description: "FK to driver"
         tests:
           - not_null
-      - name: issue_sub_type
-        description: "Detailed issue"
+      - name: total_orders
         tests:
           - not_null
 
   - name: model_mart_restaurant_quality_complaint
-    description: "Mart model for complaints about restaurant quality"
+    description: "Complaints about restaurant quality"
     columns:
       - name: restaurant_id
-        description: "FK to restaurant"
         tests:
           - not_null
-      - name: issue_sub_type
-        description: "Detailed issue"
+      - name: total_orders
         tests:
           - not_null

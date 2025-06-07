@@ -1,0 +1,95 @@
+version: 2
+
+models:
+  - name: report_driver_incentive_impact
+    description: "Final report showing impact of incentives on each driver"
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+      - name: incentive_program
+        tests:
+          - not_null
+      - name: total_bonus_earned
+        tests:
+          - not_null
+
+  - name: report_driver_perfornance
+    description: "Driver performance report for fleet optimization"
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+      - name: avg_delivery_time_mins
+        tests:
+          - not_null
+
+  - name: report_driver_zone_heatmap
+    description: "Delivery activity and failure heatmap per zone"
+    columns:
+      - name: delivery_zone
+        tests:
+          - not_null
+
+  - name: report_campaign_effectiveness
+    description: "Summary of campaign reach, cost, and revenue"
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+      - name: interaction_date
+        tests:
+          - not_null
+      - name: total_ad_cost
+        tests:
+          - not_null
+
+  - name: report_customer_acquisition
+    description: "Customer acquisition report by campaign"
+    columns:
+      - name: acquisition_date
+        tests:
+          - not_null
+      - name: campaign_id
+        tests:
+          - not_null
+
+  - name: report_retargeting_performance
+    description: "Performance of retargeting campaigns on return purchases"
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+      - name: total_ad_cost
+        tests:
+          - not_null
+
+  - name: report_complaint_summary
+    description: "Aggregated complaints by category"
+    columns:
+      - name: issue_type
+        tests:
+          - not_null
+      - name: total_complaints
+        tests:
+          - not_null
+
+  - name: report_driver_related_complaints
+    description: "Complaints filed against drivers"
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+      - name: issue_sub_type
+        tests:
+          - not_null
+
+  - name: report_restaurant_quality_complaint
+    description: "Restaurant-related quality complaint analysis"
+    columns:
+      - name: restaurant_id
+        tests:
+          - not_null
+      - name: issue_sub_type
+        tests:
+          - not_null
