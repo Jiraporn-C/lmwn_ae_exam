@@ -1,0 +1,112 @@
+version: 2
+
+models:
+  - name: model_stg_campaign_interactions
+    description: "Staging model for campaign interactions"
+    columns:
+      - name: interaction_id
+        description: "Key column"
+        tests:
+          - not_null
+          - unique
+      - name: campaign_id
+        description: "FK to campaign"
+        tests:
+          - not_null
+      - name: customer_id
+        description: "FK to customer"
+        tests:
+          - not_null
+
+  - name: model_stg_campaign_master
+    description: "Staging model for campaign master"
+    columns:
+      - name: campaign_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+
+  - name: model_stg_customers_master
+    description: "Staging model for customers"
+    columns:
+      - name: customer_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+
+  - name: model_stg_drivers_master
+    description: "Staging model for drivers"
+    columns:
+      - name: driver_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+
+  - name: model_stg_order_log_incentive_sessions_customer_app_sessions
+    description: "Staging model for customer app sessions"
+    columns:
+      - name: session_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "FK to customer"
+        tests:
+          - not_null
+
+  - name: model_stg_order_log_incentive_sessions_driver_incentive_logs
+    description: "Staging model for driver incentive logs"
+    columns:
+      - name: log_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+      - name: driver_id
+        description: "FK to driver"
+        tests:
+          - not_null
+
+  - name: model_stg_order_transactions
+    description: "Staging model for order transactions"
+    columns:
+      - name: order_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: "FK to customer"
+        tests:
+          - not_null
+
+  - name: model_stg_support_ticket_status_logs
+    description: "Staging model for support ticket status logs"
+    columns:
+      - name: log_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+      - name: ticket_id
+        description: "FK to support ticket"
+        tests:
+          - not_null
+
+  - name: model_stg_support_tickets
+    description: "Staging model for support tickets"
+    columns:
+      - name: ticket_id
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        description: "FK to order"
+        tests:
+          - not_null
+

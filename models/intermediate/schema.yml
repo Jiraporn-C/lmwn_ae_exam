@@ -1,0 +1,80 @@
+version: 2
+
+models:
+  - name: model_int_campaign_customer_orders
+    description: "Intermediate model for campaign and customer order linkage"
+    columns:
+      - name: campaign_id
+        description: "FK to campaign"
+        tests:
+          - not_null
+      - name: customer_id
+        description: "FK to customer"
+        tests:
+          - not_null
+      - name: order_id
+        description: "FK to order"
+        tests:
+          - not_null
+
+  - name: model_int_customer_sessions
+    description: "Intermediate model for enriched customer sessions"
+    columns:
+      - name: customer_id
+        description: "FK to customer"
+        tests:
+          - not_null
+      - name: session_id
+        description: "Unique session ID"
+        tests:
+          - not_null
+          - unique
+
+  - name: model_int_driver_profile_active
+    description: "Intermediate model for active driver profile"
+    columns:
+      - name: driver_id
+        description: "FK to driver"
+        tests:
+          - not_null
+          - unique
+
+  - name: model_int_driver_task_summary
+    description: "Intermediate model for task aggregation per driver"
+    columns:
+      - name: driver_id
+        tests:
+          - not_null
+
+
+  - name: model_int_order_delivery_summary
+    description: "Intermediate model for delivery performance metrics"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+      - name: driver_id
+        description: "FK to driver"
+        tests:
+          - not_null
+
+  - name: model_int_ticket_resolution_summary
+    description: "Intermediate model for support ticket resolution"
+    columns:
+      - name: ticket_id
+        description: "FK to support ticket"
+        tests:
+          - not_null
+      - name: resolution_duration_mins
+        description: "Resolution time (mins)"
+        tests:
+          - not_null
+
+  - name: model_int_zone_delivery_aggregates
+    description: "Intermediate model for delivery zone performance"
+    columns:
+      - name: delivery_zone
+        description: "Zone name"
+        tests:
+          - not_null
