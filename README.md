@@ -48,8 +48,8 @@ Final reports use: `report_<report_name>`
 
 ## 📁 Output File
 
-All models and reports are written into:
-
+All models and reports are written into: ae_exam_db.duckdb
+---
 ##📦 Note for Submission
 
 Due to file size limitations in the submission form (max 50MB),  
