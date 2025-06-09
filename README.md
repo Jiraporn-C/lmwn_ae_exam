@@ -1,7 +1,6 @@
 # lmwn_ae_exam
 
-This repository contains the solution for the **Analytics Engineering Exam** from a food delivery platform company.  
-The objective is to build a modular and scalable data model using `dbt` and `DuckDB`, and generate multiple reports for business use cases.
+This project is a submission for the Analytics Engineering Exam by **LINE MAN Wongnai**, aiming to build a scalable data model with **dbt** and **DuckDB**, and deliver reports for multiple business use cases.
 
 ---
 
@@ -30,19 +29,19 @@ Final reports use: `report_<report_name>`
 
 ## 📊 Reports Created
 
-1. **Fleet Management**
+1.**Performance Marketing**
+   - `report_campaign_effectiveness`
+   - `report_customer_acquisition`
+   - `report_retargeting_performance`
+2. **Fleet Management**
    - `report_driver_performance`
    - `report_delivery_zone_heatmap`
    - `report_driver_incentive_impact`
 
-2. **Customer Service**
+3. **Customer Service**
    - `report_complaint_summary_dashboard`
    - `report_driver_related_complaints`
    - `report_restaurant_quality_complaints`
-
-3. **Performance Marketing**
-   - `report_campaign_effectiveness`
-   - `report_customer_acquisition`
 
 ---
 
