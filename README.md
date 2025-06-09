@@ -29,10 +29,11 @@ Final reports use: `report_<report_name>`
 
 ## 📊 Reports Created
 
-1.**Performance Marketing**
+1. **Performance Marketing**
    - `report_campaign_effectiveness`
    - `report_customer_acquisition`
    - `report_retargeting_performance`
+
 2. **Fleet Management**
    - `report_driver_performance`
    - `report_delivery_zone_heatmap`
