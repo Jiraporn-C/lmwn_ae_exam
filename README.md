@@ -46,14 +46,17 @@ Final reports use: `report_<report_name>`
 
 ---
 
-## 📁 Output File
+### 📁 Output File
 
-All models and reports are written into: ae_exam_db.duckdb
+All models and reports are written into: `ae_exam_db.duckdb`
+
 ---
-##📦 Note for Submission
+
+### 📦 Note for Submission
 
 Due to file size limitations in the submission form (max 50MB),  
 the `ae_exam_db.duckdb` file is **excluded** from the ZIP file.  
 However, the full version including this file is available in the public GitHub repository.
 
-GitHub repo: https://github.com/Jiraporn-C/lmwn_ae_exam
+🔗 GitHub repo: [https://github.com/Jiraporn-C/lmwn_ae_exam](https://github.com/Jiraporn-C/lmwn_ae_exam)
+
